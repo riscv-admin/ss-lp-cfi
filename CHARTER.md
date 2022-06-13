@@ -1,7 +1,7 @@
-# {{ New Group Name }} Charter
+# SS-LP-CFI (Shadow Stack and Landing Pads for Control Flow Integrity) TG Charter
 
-The information in this file should be created as part of the group formation and approved by your sponsoring group.  See the [Chairs Best Practices policy](https://docs.google.com/document/d/1rtXskVd7YyFq74tQ2OrInyM_-OQa228R5UZs5Pm3Vz0/) for more details.
+Advanced exploitation techniques based on code reuse, do not introduce new code in vulnerable  programs. Code reuse attacks are based on diverting the control flow of an application by overwriting function pointers and return addresses.
 
-A good Task Group (TG) charter describes how it achieves filling in a gap defined by the Special Interest Group (SIG) or Committee that spawned it (directly or dotted line). It lists the specific small set of  deliverables it will deliver.
+The SS-LP-CFI task group will define privileged and unprivileged ISA extensions that can be used by privileged and unprivileged programs to protect the integrity of their control-flow. Specifically, for protecting backward-edges we will define a shadow stack for storing return-addresses in each privilege level. For protecting forward-edges we will design a flexible label based landing pads approach which will ensure that the execution adheres to the application&apos;s Control-Flow Graph. The design will follow the threat model compiled in CFI-SIG and will be updated on demand.
 
-A SIG is an extension of a Committee, in that its only deliverables are strategy, gaps, and prioritizations, and helping spawn other SIGs or TGs to fill the gaps. A good SIG charter spells out the small set of topic areas their strategy will address along with its responsibilities as laid out in this bullet.
+The TG will develop written specification, executable model, simulator (Spike, QEMU), prototype implementations (CVA6), toolchain prototype (llvm, binutils, glibc), OS prototype (Linux) and compliance suite (Sail specification) for the RISC-V CFI extensions.
